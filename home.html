@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh design of B10-A5</title>
+    <!-- link to daisyUI and also tailwind css-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font lexend -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    
+
+    <!-- tailwind css color property add-->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                navbar: 'rgba(253, 216, 53, 0.10)',
+                bdtTaka: 'rgba(17, 17, 17, 0.7)',
+                btnColor:'#B4F461',
+                blackColor:'#111111',
+              },
+              fontFamily:{
+                 Lexend:"Lexend, sans-serif",
+              },
+            },
+          },
+        }
+      </script>
+
+</head>
+ <body>
+    <main>
+        <nav class=" bg-white mx-auto sticky top-0 z-50  shadow-sm">
+            <section class="bg-navbar">
+              <div class="navbar w-11/12 mx-auto px-4 sm:px-6 lg:px-8></div>">
+                <div class="navbar-start ">
+                  <a id="blog" class="btn bg-btnColor text-blackColor font-semibold text-sm px-8 ">Home</a>
+                </div>
+                <div class="navbar-center flex items-center justify-center gap-2">
+                  <img src="./assets/logo.png" alt="">
+                  <button class=" text-blackColor font-semibold text-sm">Donate Bangladesh</button>
+                </div>
+                <div class="navbar-end gap-2">
+                  <span > <img src="./assets/coin.png" alt=""></span>
+                   <h3 class="text-bdtTaka font-medium text-sm ">
+                    <span>5500 </span>
+                    <span>BDT</span>
+                   </h3>
+                </div>
+              </div>
+            </section>
+             <!-- button Content -->
+            <section class="bg-white flex items-center justify-center py-6 gap-4">
+              <a class="btn bg-btnColor text-blackColor font-semibold text-sm px-6 ">Donation</a>
+              <a class="btn btn-outline font-semibold text-sm text-bdtTaka px-6">History</a>
+               
+            </section>
+           </nav> 
+           <section id="History" class="space-y-4">
+
+           </section>
+    </main>
+    <script src="./js/history.js"></script>
+ </body>
+</html>
