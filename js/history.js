@@ -19,9 +19,4 @@ document.getElementById('btnDonation').addEventListener('click',function(){
 document.getElementById('btnHistory').addEventListener('click',function(){
     NoakhaliHistory.classList.remove('hidden');
 });
-document.getElementById('btnHistory').addEventListener('click',function(){
-    FeniHistory.classList.remove('hidden');
-});
-document.getElementById('btnHistory').addEventListener('click',function(){
-    quotaHistory.classList.remove('hidden');
-});
+ 

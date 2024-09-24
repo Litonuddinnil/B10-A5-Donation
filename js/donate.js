@@ -69,7 +69,7 @@ document.getElementById('donate-feni').addEventListener('click',function(event){
           }
         // donate feni history
         const p =document.createElement('p');
-        p.innerText =`${inputFieldValueFeni}Taka is${ feniTitle.innerText}
+        p.innerText =`${inputFieldValueFeni} Taka is ${ feniTitle.innerText}
          ${new Date()}`;
         document.getElementById('FeniHistory').appendChild(p);
     }
@@ -105,7 +105,7 @@ document.getElementById('donate-quota').addEventListener('click',function(event)
           }
         // quota donation history
           const p =document.createElement('p');
-        p.innerText =`${inputFieldValuequota} Taka is${quotaTitle.innerText}
+        p.innerText =`${inputFieldValuequota} Taka is ${quotaTitle.innerText}
          ${new Date()}`;
         document.getElementById('quotaHistory').appendChild(p);
     }
