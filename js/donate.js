@@ -7,9 +7,7 @@ document.getElementById('donate-Noakhali').addEventListener('click',function(eve
     const inputFieldValueNoakhali =getInputFieldValueById('input-data-Noakhali'); 
     
     const donationAmount =Number(inputFieldValueNoakhali);  
-    // if(donationAmount > 0 && Number.isInteger(donationAmount)){
-    //     hiddenMode.classList.remove('hidden');
-    // }
+    
      
     if( donationAmount > 0 && Number.isInteger(donationAmount) ){
           // add to money Noakhali Donation
@@ -18,10 +16,17 @@ document.getElementById('donate-Noakhali').addEventListener('click',function(eve
           // current money sub new balance
           const currentMoneyNumber = getTextFieldValueById('current-Balance');
           const newBalance =currentMoneyNumber-inputFieldValueNoakhali;
+           
           if(newBalance>0){
               
               document.getElementById('Money-Noakhali').innerText=totalDonateNoakhali; 
               document.getElementById('current-Balance').innerText=newBalance;
+              // history donation
+                const p =document.createElement('p');
+                p.innerText =`${inputFieldValueNoakhali} Taka is ${NoakhaliTitle.innerText}
+                ${new Date()}`;
+                document.getElementById('NoakhaliHistory').appendChild(p);  
+                
           }
            
             else{
@@ -30,11 +35,7 @@ document.getElementById('donate-Noakhali').addEventListener('click',function(eve
                 window.location.reload();
               }
           
-          // history donation
-          const p =document.createElement('p');
-          p.innerText =`${inputFieldValueNoakhali} Taka is ${NoakhaliTitle.innerText}
-           ${new Date()}`;
-          document.getElementById('NoakhaliHistory').appendChild(p);  
+         
     } 
     else{
         alert('Not a valid Number for Donation');

@@ -16,12 +16,12 @@ document.getElementById('btnDonation').addEventListener('click',function(){
     btnDonation.classList.add('bg-btnColor');
     btnHistory.classList.remove('bg-btnColor');
 });
-document.getElementById('donate-Noakhali').addEventListener('click',function(){
+document.getElementById('btnHistory').addEventListener('click',function(){
     NoakhaliHistory.classList.remove('hidden');
 });
-document.getElementById('donate-feni').addEventListener('click',function(){
+document.getElementById('btnHistory').addEventListener('click',function(){
     FeniHistory.classList.remove('hidden');
 });
-document.getElementById('donate-quota').addEventListener('click',function(){
+document.getElementById('btnHistory').addEventListener('click',function(){
     quotaHistory.classList.remove('hidden');
 });
