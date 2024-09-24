@@ -8,14 +8,8 @@ document.getElementById('btnHistory').addEventListener('click',function(){
     btnDonation.classList.remove('bg-btnColor'); 
 
         
-    NoakhaliHistory.classList.add('hidden','border','border-dashed','rounded-xl','p-8','text-2xl','my-3'); 
-    NoakhaliHistory.classList.remove('hidden');
-    FeniHistory.classList.add('hidden','border','border-dashed','rounded-xl','p-8','text-2xl','my-3');
-    FeniHistory.classList.remove('hidden');
-    quotaHistory.classList.add('hidden','border','border-dashed','rounded-xl','p-8','text-2xl','my-3');
-    quotaHistory.classList.remove('hidden');
-    
-        
+    historyItems.classList.add('hidden'); 
+    historyItems.classList.remove('hidden'); 
 });
 document.getElementById('btnDonation').addEventListener('click',function(){
     noakhaliSection.classList.remove('hidden');
@@ -24,9 +18,8 @@ document.getElementById('btnDonation').addEventListener('click',function(){
     btnDonation.classList.add('bg-btnColor');
     btnHistory.classList.remove('bg-btnColor'); 
 
-    NoakhaliHistory.classList.add('hidden');  
-    FeniHistory.classList.add('hidden');
-    quotaHistory.classList.add('hidden');
+    historyItems.classList.add('hidden');  
+   
 
 
 });

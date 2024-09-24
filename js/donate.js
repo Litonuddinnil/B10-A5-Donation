@@ -23,10 +23,12 @@ document.getElementById('donate-Noakhali').addEventListener('click',function(eve
               document.getElementById('current-Balance').innerText=newBalance;
               // history donation
                 const p =document.createElement('p');
-                p.innerText =`${inputFieldValueNoakhali} Taka is ${NoakhaliTitle.innerText}
-                ${new Date()}`;
-                document.getElementById('NoakhaliHistory').appendChild(p);  
+                p.innerHTML +=`<div class="border border-dashed rounded-xl p-8 text-2xl my-3">${inputFieldValueNoakhali} Taka is ${NoakhaliTitle.innerText}
+                ${new Date()}</div> <br>`;
+                const noakhaliHistory =document.getElementById('historyItems');
+                noakhaliHistory.appendChild(p);  
                 
+                  
           }
            
             else{
@@ -34,8 +36,7 @@ document.getElementById('donate-Noakhali').addEventListener('click',function(eve
                 hiddenMode.classList.add('hidden');
                 window.location.reload();
               }
-          
-         
+           
     } 
     else{
         alert('Not a valid Number for Donation');
@@ -61,17 +62,20 @@ document.getElementById('donate-feni').addEventListener('click',function(event){
                  
                  document.getElementById('Money-Feni').innerText=totalDonateFeni; 
                  document.getElementById('current-Balance').innerText=newBalance;
+                   // donate feni history
+                  const p =document.createElement('p');
+                  p.innerHTML +=`<div class="border border-dashed rounded-xl p-8 text-2xl my-3"> ${inputFieldValueFeni} Taka is ${ feniTitle.innerText}
+                  ${new Date()}</div> <br>`;
+                const feniHistory =  document.getElementById('historyItems');
+                feniHistory.appendChild(p);
+                 
             } 
           else{
             alert('Your current balance is low.');
             hiddenMode.classList.add('hidden');
             window.location.reload();
           }
-        // donate feni history
-        const p =document.createElement('p');
-        p.innerText =`${inputFieldValueFeni} Taka is ${ feniTitle.innerText}
-         ${new Date()}`;
-        document.getElementById('FeniHistory').appendChild(p);
+      
     }
     else{
         alert('Not a valid Number for Donation');
@@ -80,7 +84,7 @@ document.getElementById('donate-feni').addEventListener('click',function(event){
     }
 });
 
-// quota
+// // quota
 document.getElementById('donate-quota').addEventListener('click',function(event){
     event.preventDefault(); 
     const inputFieldValuequota =getInputFieldValueById('input-data-quota');
@@ -97,17 +101,21 @@ document.getElementById('donate-quota').addEventListener('click',function(event)
             
             document.getElementById('Money-quota').innerText=totalDonatequota; 
             document.getElementById('current-Balance').innerText=newBalance;
+             // quota donation history
+          const p =document.createElement('p');
+          p.innerHTML+=`<div class="border border-dashed rounded-xl p-8 text-2xl my-3"> ${inputFieldValuequota} Taka is ${quotaTitle.innerText}
+          ${new Date()}</div> <br>`;
+         
+       const qutoaHistoryValue =  document.getElementById('historyItems');
+       qutoaHistoryValue.appendChild(p);
+     
         }
         else{
             alert('Your current balance is low.');
             hiddenMode.classList.add('hidden');
             window.location.reload();
           }
-        // quota donation history
-          const p =document.createElement('p');
-        p.innerText =`${inputFieldValuequota} Taka is ${quotaTitle.innerText}
-         ${new Date()}`;
-        document.getElementById('quotaHistory').appendChild(p);
+       
     }
     else{
         alert('Not a valid Number for Donation');
