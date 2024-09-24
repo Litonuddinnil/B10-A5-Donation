@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-    
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/ed00ea4d14.js" crossorigin="anonymous"></script>
 
     <!-- tailwind css color property add-->
     <script>
@@ -33,21 +34,21 @@
       </script>
 
 </head>
- <body>
+ <body class="font-Lexend">
     <main>
         <nav class=" bg-white mx-auto sticky top-0 z-50  shadow-sm">
             <section class="bg-navbar">
               <div class="navbar w-11/12 mx-auto px-4 sm:px-6 lg:px-8></div>">
                 <div class="navbar-start ">
-                  <a id="blog" class="btn bg-btnColor text-blackColor font-semibold text-sm px-8 ">Home</a>
+                  <a onclick="goHome()" class="btn bg-btnColor text-blackColor font-semibold text-sm md:text-lg px-2 md:px-8 ">Home</a>
                 </div>
                 <div class="navbar-center flex items-center justify-center gap-2">
-                  <img src="./assets/logo.png" alt="">
-                  <button class=" text-blackColor font-semibold text-sm">Donate Bangladesh</button>
+                  <img class="w-[20px] md:w-[45px]" src="./assets/logo.png" alt="">
+                  <button class=" text-blackColor font-semibold text-sm md:text-lg">Donate Bangladesh</button>
                 </div>
-                <div class="navbar-end gap-2">
-                  <span > <img src="./assets/coin.png" alt=""></span>
-                   <h3 class="text-bdtTaka font-medium text-sm ">
+                <div class="navbar-end gap-2  p-4">
+                  <span > <img   class="w-[20px] md:w-full"src="./assets/coin.png" alt=""></span>
+                   <h3 class="text-bdtTaka font-medium text-sm md:text-xl ">
                     <span>5500 </span>
                     <span>BDT</span>
                    </h3>
@@ -61,8 +62,45 @@
                
             </section>
            </nav> 
+           <section class="w-11/12 mx-auto">
+            <div class="text- blackColor text-4xl p-4 my-4 font-extrabold">
+              <h1>Important FAQ<i class="fa-solid fa-question"></i></h1>
+            </div>
+            <div class="join join-vertical w-full">
+              <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" checked="checked" />
+                <div class="collapse-title text-xl font-medium">1. What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a web page as a tree of objects, where each node corresponds to a part of the document (such as elements, attributes, and text). The DOM allows programs (typically written in JavaScript) to interact with and manipulate the content, structure, and style of a webpage dynamically.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-medium">2.How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <p>To select an element from the DOM, methods like getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector(), and querySelectorAll() are used.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-medium">3.What is event delegation in the context of the DOM, and why is it useful? </div>
+                <div class="collapse-content">
+                  <p>Event delegation is a technique where a single event listener is added to a parent element to handle events from its child elements. It improves performance and supports dynamically added elements by leveraging event bubbling.</p>
+                </div>
+              </div>
+            </div>
+              <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-medium">4.How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                  <p>You can manipulate an element's attributes using setAttribute(), getAttribute(), and removeAttribute(), while styles can be adjusted through the element's style property, modifying individual CSS properties.</p>
+                </div>
+              </div>
+            </div>
+           </section>
           
     </main>
     <script src="./js/history.js"></script>
+    <script src="./js/home.js"></script>
  </body>
 </html>
